@@ -4,7 +4,7 @@
 
 # Ingressando no dominio PS: e necessaria autenticacao do usuario adm_gilsonjunior para realizar a integracao
 
-domainjoin-cli join --assumeDefaultDomain yes incra.gov.br adm_gilsonjunior
+domainjoin-cli join --assumeDefaultDomain yes incra.local adm_gilsonjunior
 
 #Habilitando o acesso via ssh para os usuarios do AD
 
@@ -12,7 +12,7 @@ domainjoin-cli configure --enable ssh
 
 #Configurando prefixo do dominio para a autenticacao dos usuarios
 
-/opt/pbis/bin/config UserDomainPrefix incra-sede
+/opt/pbis/bin/config UserDomainPrefix incra
 
 #Configurando dominio existente como padrao
 
@@ -59,4 +59,4 @@ fi
 
 #E necessario o reboot do servidor
 
-reboot
+#reboot
